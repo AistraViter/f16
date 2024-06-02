@@ -38,9 +38,113 @@ body {
     color: #00b068;
 }
 
+.accordion {
+    border-bottom: 1px solid #ccc;
+    padding: 28px 24px;
+    width: 320px;
+    height: 140px;
+}
+
+.accordion-item {}
+
+.accordion-title {}
+
+.icon {}
+
+.accordion-content {}
+
+.paragraf {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 .accordion .accordion-item {
-    border-bottom: 1px solid var(--white);
-    ;
+    border-bottom: 1px solid #ccc;
+    padding: 28px 24px;
+    width: 320px;
+    height: 140px;
 }
 
 .accordion .accordion-item button[aria-expanded=true] {
@@ -70,6 +174,24 @@ body {
     padding: 28px 24px;
     width: 544px;
     height: 176px;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.60;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #292929;
+    border-bottom: 1px solid #ccc;
+    padding: 28px 24px;
+    width: 320px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 28px 24px;
+    width: 320px;
+    height: 360px;
 }
 
 .paragraf {
@@ -159,4 +281,4 @@ body {
     font-size: 1rem;
     font-weight: 300;
     margin: 2em 0;
-}
+} */
