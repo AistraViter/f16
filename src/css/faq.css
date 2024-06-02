@@ -39,7 +39,8 @@ body {
 }
 
 .accordion .accordion-item {
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid var(--white);
+    ;
 }
 
 .accordion .accordion-item button[aria-expanded=true] {
@@ -50,7 +51,6 @@ body {
     position: relative;
     display: block;
     text-align: left;
-    width: 100%;
     padding: 1em 0;
     color: #7288a2;
     font-size: 1.15rem;
@@ -58,6 +58,28 @@ body {
     border: none;
     background: none;
     outline: none;
+    font-family: "Poppins",
+        sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #292929;
+    border-bottom: 1px solid #ccc;
+    padding: 28px 24px;
+    width: 544px;
+    height: 176px;
+}
+
+.paragraf {
+    font-family: "Poppins",
+        sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: #292929;
 }
 
 .accordion button:hover,
@@ -69,8 +91,8 @@ body {
 .accordion button:hover::after,
 .accordion button:focus::after {
     cursor: pointer;
-    color: #03b5d2;
-    border: 1px solid #03b5d2;
+    background: rgba(0, 176, 104, 0.2);
+
 }
 
 .accordion button .accordion-title {
