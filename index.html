@@ -17,7 +17,7 @@
   <script type="module" crossorigin src="/f16/commonHelpers.js"></script>
   <link rel="modulepreload" crossorigin href="/f16/assets/vendor-b531c9a1.js">
   <link rel="stylesheet" href="/f16/assets/vendor-c36716e1.css">
-  <link rel="stylesheet" href="/f16/assets/index-81763ae3.css">
+  <link rel="stylesheet" href="/f16/assets/index-5f93a2df.css">
 </head>
 
 <body class="light-theme">
@@ -793,13 +793,18 @@
       </div>
 
       <form class="work-together-form" id="work-together-form">
-        <input
-          class="user-email"
-          id="user-email"
-          name="email"
-          placeholder="Your email*"
-          required
-        />
+        <div class="input-wrapper">
+          <input
+            class="user-email"
+            id="user-email"
+            name="email"
+            placeholder="Your email*"
+            required
+          />
+          <svg class="email-check-icon" width="16" height="16">
+            <use href="/f16/assets/symbol-defs-ef8b93eb.svg#icon-green-check-mark"></use>
+          </svg>
+        </div>
         <p id="email-error" style="color: #e74a3b; display: none">
           Invalid email, try again
         </p>
@@ -810,7 +815,6 @@
           placeholder="Message"
           required
         ></textarea>
-
         <button class="btn-message" id="sendButton" type="submit">
           Send Message
         </button>
