@@ -17,55 +17,59 @@
   <script type="module" crossorigin src="/f16/commonHelpers.js"></script>
   <link rel="modulepreload" crossorigin href="/f16/assets/vendor-b531c9a1.js">
   <link rel="stylesheet" href="/f16/assets/vendor-c36716e1.css">
-  <link rel="stylesheet" href="/f16/assets/index-620ac36f.css">
+  <link rel="stylesheet" href="/f16/assets/index-e1501212.css">
 </head>
 
 <body class="light-theme">
     <header class="header-section">
   <div class="container">
     <nav class="navigation">
-      <a href="./index.html" class="logo logo-mobile"
-        >LLOYD<span class="green-span">JEFFERSON.</span></a
-      >
-
-      <!-- --------------------Меню для планшетів та десктопів------------------------- -->
-
-      <ul class="desktop-menu">
-        <li>
-          <label class="switch">
-            <input type="checkbox" id="toggle-theme" />
-            <span class="slider round"></span>
-          </label>
-        </li>
-
-        <li><a class="header-soc-link" href="#about-me">About me</a></li>
-        <li><a class="header-soc-link" href="#projects">Projects</a></li>
-        <li><a class="header-soc-link" href="#contacts">Contacts</a></li>
-      </ul>
-
-      <!-- --------------------Мобільне меню------------------------- -->
-
-      <ul class="list menu" id="menu">
-        <a href="./index.html" class="logo"
+      <div class="upper-menue">
+        <a href="./index.html" class="logo logo-mobile"
           >LLOYD<span class="green-span">JEFFERSON.</span></a
         >
-        <button type="button" id="closeIcon" class="close-menu">
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADzSURBVHgB7ZZNEoMgDIWDF6nd6S3sydtb6K70JDRxXFgGEvI2dcGbYWAU8j75CRJ1dXX9WUF7OU3Te+8UwrKu64cc4rEjV09pb9t2r/UbtCBsLGVMKb3meb6R01zGSgxNKgAbP7iKHoizuYzlsmj9dbwjIAeTqRSIqC1HydxaOhOgFQIxbwawIFBzF0ANguuAmrsBShB7ENAcAsghjkcRMRcNBIq/vtj2CloC+l1zkXlEa3LNQGm3I8nqLNcxpMpu9yQrCKDlnKMQTamYGs85AmFdxyM5k4wXwtqE7gzHd3/MN6bW3/wfICDJZBDU1dV1aX0Bb5jZUZAT160AAAAASUVORK5CYII=" alt="Close" />
+        <button type="button" id="menuIcon" class="menu-icon">
+          <svg width="20" height="20">
+            <use href="/f16/assets/symbol-defs-c0a3b723.svg#icon-up_arrow_visit"></use>
+          </svg>
         </button>
-        <li class="link-nav"><a href="#about-me">About me</a></li>
-        <li class="link-nav"><a href="#projects">Projects</a></li>
-        <li class="link-nav"><a href="#contacts">Contacts</a></li>
-      </ul>
 
-      <button type="button" id="menuIcon" class="menu-icon">
-        <svg width="20" height="20">
-          <use href="/f16/assets/symbol-defs-c0a3b723.svg#icon-up_arrow_visit"></use>
-        </svg>
-      </button>
+        <!-- --------------------Меню для планшетів та десктопів------------------------- -->
+
+        <ul class="desktop-menu">
+          <li>
+            <label class="switch">
+              <input type="checkbox" id="toggle-theme" />
+              <span class="slider round"></span>
+            </label>
+          </li>
+
+          <li><a class="header-soc-link" href="#about-me">About me</a></li>
+          <li><a class="header-soc-link" href="#projects">Projects</a></li>
+          <li><a class="header-soc-link" href="#contacts">Contacts</a></li>
+        </ul>
+      </div>
+      <!-- --------------------Мобільне меню------------------------- -->
+
+      <div class="modal-menu" id="menu">
+        <div class="upper-menue">
+          <a href="./index.html" class="logo logo-mobile"
+            >LLOYD<span class="green-span">JEFFERSON.</span></a
+          >
+          <button type="button" id="closeIcon" class="close-menu">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADzSURBVHgB7ZZNEoMgDIWDF6nd6S3sydtb6K70JDRxXFgGEvI2dcGbYWAU8j75CRJ1dXX9WUF7OU3Te+8UwrKu64cc4rEjV09pb9t2r/UbtCBsLGVMKb3meb6R01zGSgxNKgAbP7iKHoizuYzlsmj9dbwjIAeTqRSIqC1HydxaOhOgFQIxbwawIFBzF0ANguuAmrsBShB7ENAcAsghjkcRMRcNBIq/vtj2CloC+l1zkXlEa3LNQGm3I8nqLNcxpMpu9yQrCKDlnKMQTamYGs85AmFdxyM5k4wXwtqE7gzHd3/MN6bW3/wfICDJZBDU1dV1aX0Bb5jZUZAT160AAAAASUVORK5CYII=" alt="Close" />
+          </button>
+        </div>
+
+        <ul class="list">
+          <li class="link-nav"><a href="#about-me">About me</a></li>
+          <li class="link-nav"><a href="#projects">Projects</a></li>
+          <li class="link-nav"><a href="#contacts">Contacts</a></li>
+        </ul>
+      </div>
     </nav>
   </div>
 </header>
-
 
   <main>
     <section class="section hero">
