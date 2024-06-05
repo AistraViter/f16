@@ -44,15 +44,10 @@
   align-items: center;
 }
 
-.hero-btn-text {
-  z-index: 1;
-  font-size: 18px;
-  text-transform: uppercase;
-  text-align: left;
-}
 .text-overlap {
   position: absolute;
   z-index: 2;
+  width: 100%;
 }
 
 .hero-btn {
@@ -63,7 +58,13 @@
   background: transparent;
   margin-left: auto; /* Притискання прямокутника до правого краю */
 
-  /* scroll-behavior: smooth; */
+  display: inline-block;
+  padding: 36px 0;
+  width: 100%;
+  z-index: 1;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: left;
 }
 
 .dark-theme .hero-btn {
@@ -73,11 +74,11 @@
   content: '';
   position: absolute;
   border-radius: 16px;
-  width: 165px;
+  width: 60%;
   height: 92px;
   background-color: rgba(0, 176, 104, 0.2);
   top: 0;
-  left: 0;
+  right: 0;
   z-index: -1;
   transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -181,12 +182,12 @@
 
   .hero-btn {
     position: relative;
-    width: 261px;
+    /* width: 261px; */
     height: 92px;
   }
 
   .hero-btn::after {
-    width: 261px;
+    /* width: 261px; */
   }
 
   .hero h1 {
@@ -250,6 +251,4 @@
   .hero-intro {
     width: 592px;
   }
-
- 
 }
