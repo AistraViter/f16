@@ -1,228 +1,179 @@
-.faq {
-    font-family: "Impact", sans-serif;
-    font-weight: 400;
-    font-size: 52px;
-    line-height: 1.23077;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #292929;
-    margin-bottom: 42px;
+/* Загальні стилі для аккордеону */
+
+.accordion {
+  min-width: 280px;
+  max-width: 320px;
+  margin: 40px auto 0;
+  padding: 0;
+  list-style: none;
 }
 
-.questions {
-    color: #00b068;
+/* Стилі для елементів аккордеону */
+.accordion-item {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #ccc;
+  overflow: hidden;
+  transition: background 200ms linear;
 }
 
-/* .accordion-item {}
-
-.accordion-title {
-    font-family: "Poppins", sans-serif;
-    width: 320px;
-    height: 140px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.56;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--black);
-    cursor: pointer;
-    border-top: none;
-    border-bottom: 1px solid #ccc;
-    border-radius: 16px;
-}
-
-.accordion:first-child {
-    border-top: 1px solid var();
-}
-
-.accordion__title.active {
-    box-shadow: 0 0 12px 1px var(--color-border-active-blue);
-}
-
-.accordion__title span {
-    display: inline-flex;
-    position: relative;
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
-    transform: rotate(0);
-    transition: transform 0.5s ease-out;
-}
-
-.icon {}
-
-.accordion__content {
-    font-size: 20px;
-    line-height: 1.3;
-    overflow: hidden;
-    padding: 0 20px;
-    box-sizing: content-box;
-    border: 1px solid var(--color-border-grey);
-    border-top: none;
-    max-height: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: max-height 0.5s ease-out, padding 0.5s ease-out, opacity 0.1s ease-out 0.5s, visibility 0.1s ease-out 0.5s;
-}
-
-.accordion__content.active {
-    visibility: visible;
-    opacity: 1;
-    padding: 20px;
-    transition: max-height 0.5s ease-out, padding 0.5s ease-out, opacity 0.1s ease-out, visibility 0.1s ease-out;
-}
-
-.paragraph {} */
-
-/* TABLET */
-@media screen and (min-width: 768px) {}
-
-
-/* DESKTOP */
-@media screen and (min-width: 1260px) {}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.accordion .accordion-item {
-    border-bottom: 1px solid #292929;
-    ;
-}
-
-.accordion .accordion-item button[aria-expanded=true] {
-    /* border-bottom: 1px solid #03b5d2; */
-}
-
-.accordion button {
-    position: relative;
-    display: block;
-    text-align: left;
-    width: 100%;
-    padding: 1em 0;
-    color: #292929;
-    font-size: 1.15rem;
-    font-weight: 400;
+/* Стилі для першого елемента */
+.accordion-item:first-child {
     border: none;
-    background: none;
-    outline: none;
+}
+  
+  /* Стилі для останнього елемента */
+  .accordion-item:last-child {
+    border-bottom: 1px solid #ccc;
+}
+
+/* Додаємо фоновий колір для активного елемента */
+.accordion-item.active {
+  background: rgba(0, 176, 104, 0.2); /* Світло салатовий фон при відкритті */
+  border: none;
+  border-radius: 18px;
 }
 
 
-
-.accordion button:hover::after,
-.accordion button:focus::after {
-    cursor: pointer;
-    color: #03b5d2;
-    border: 1px solid #03b5d2;
+/* Ховаємо рамку попереднього активного елемента */
+.accordion-item.active + .accordion-item {
+      border: none;
 }
 
-.accordion button .accordion-title {
-    padding: 1em 1.5em 1em 0;
+/* Стилі для заголовків аккордеону */
+.accordion-title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: inherit;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 24px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+  transition: background 200ms linear;
+  position: relative; /* Додаємо для псевдоелемента */
+  text-align: left; /* Вирівнювання по лівому краю */
 }
 
-.accordion button .icon {
-    display: inline-block;
+/* Стилі для контенту аккордеону */
+.accordion-content {
+  background: none;
+  padding: 28px 24px;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.accordion-content p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  margin-top: -24px;
+}
+
+/* Стилі для іконок */
+.accordion-title .icon {
+  display: flex;
+}
+
+.arrow {
+  display: none;
+}
+
+.arrow.down {
+  display: block;
+}
+
+.accordion-title[aria-expanded='true'] .arrow.down {
+  display: none;
+}
+
+.accordion-title[aria-expanded='true'] .arrow.up {
+  display: block;
+}
+
+/* При розгортанні заголовка, видаляємо підкреслення */
+.accordion-title[aria-expanded='true']::after {
+  background-color: transparent;
+}
+
+
+body.dark-theme .arrow path {
+
+    stroke: white; 
+  }
+
+/* *****************TABLET********************* */
+
+@media screen and (min-width: 768px) {
+  .accordion {
+    width: 704px;
+    max-width: 704px;
+  }
+  .accordion button {
+    width: 704px;
+    max-width: 704px;
+  }
+
+  .accordion-title {
+    color: inherit;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .picture {
+    display: none;
+  }
+
+  .accordion .accordion-item button[aria-expanded='true'] {
+    width: 704px;
+  }
+}
+
+/* ****************DESKTOP****************** */
+
+@media screen and (min-width: 1280px) {
+  .container-faq {
+    width: 1280px;
+    height: 1020px;
+    position: relative;
+  }
+
+  .headline-faq {
+    width: 520px;
+  }
+
+  .container-faq::before {
+    width: 526px;
+    height: 408px;
+    content: '';
     position: absolute;
-    top: 18px;
-    right: 0;
-    width: 22px;
-    height: 22px;
-    border: 1px solid;
-    border-radius: 22px;
-}
+    bottom: 0;
+    left: 32px;
+    background-image: url('/img/decor-big-faq.png');
+    background-repeat: no-repeat;
+    z-index: -1; /* Розміщує псевдоелемент позаду контенту */
+  }
 
-.accordion button .icon::before {
-    display: block;
+  .accordion {
+    width: 592px;
+    max-width: 592px;
     position: absolute;
-    content: "";
-    top: 9px;
-    left: 5px;
-    width: 10px;
-    height: 2px;
-    background: currentColor;
-}
+    right: 32px;
+    top: 212px;
+  }
 
-.accordion button .icon::after {
-    display: block;
-    position: absolute;
-    content: "";
-    top: 5px;
-    left: 9px;
-    width: 2px;
-    height: 10px;
-    background: currentColor;
-}
-
-.accordion button[aria-expanded=true] {
-    color: #4D4D4D;
-}
-
-.accordion button[aria-expanded=true] .icon::after {
-    width: 0;
-}
-
-.accordion button[aria-expanded=true]+.accordion-content {
-    opacity: 1;
-    max-height: 9em;
-    transition: all 200ms linear;
-    will-change: opacity, max-height;
-}
-
-.accordion .accordion-content {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: opacity 200ms linear, max-height 200ms linear;
-    will-change: opacity, max-height;
-}
-
-.accordion .accordion-content p {
-    font-size: 1rem;
-    font-weight: 300;
-    margin: 2em 0;
+  .accordion button {
+    width: 592px;
+    max-width: 592px;
+  }
 }

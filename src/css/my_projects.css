@@ -29,7 +29,6 @@
 }
 
 .my-project-link {
-  display: inline-block;
   text-transform: uppercase;
   border: none;
   border-radius: 8px;
@@ -38,8 +37,8 @@
   display: flex;
   align-items: center;
   width: 125px;
+  height: 48px;
   text-align: right;
-  
 }
 
 .my-project-link:hover {
@@ -48,7 +47,8 @@
 }
 
 .my-project-link-block {
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .vector-icon {
